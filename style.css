@@ -1,0 +1,110 @@
+/* ---------- ALL ----------*/
+
+* {
+    --myGreen: #2BCDC0;
+    --myBlue: #34A9DD;
+    --myRed: #F46730;
+    --myBlack: #1C1C1C;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--myBlack);
+}
+
+h1 {
+    font-family: 'Vollkorn', serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* ---------- HEADER ----------*/
+
+header {
+    background: var(--myGreen);
+    color: white;
+    height: 371px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: header;
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+/* ---------- MAIN ----------*/
+
+main {
+    /* background: var(--myBlack); */
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.card p {
+    font-family: 'Roboto', sans-serif;
+}
+
+p:nth-of-type(3n) {
+    margin-top: 10px;
+}
+
+.card {
+    width: 180px;
+    text-align: center;
+    margin: 30px 110px 50px 0;
+}
+
+.card h1 {
+    font-size: 40px;
+    /* padding-bottom: px; */
+    margin-top: 18px;
+}
+
+.card:first-child {
+    border-top: 32px solid var(--myBlue);
+    /* grid-area: card-one; */
+}
+
+.card:nth-child(2) {
+    border-top: 32px solid var(--myRed);
+    /* grid-area: card-two; */
+}
+
+.card:last-child {
+    border-top: 32px solid var(--myGreen);
+    margin-right: 0;
+    /* grid-area: card-three; */
+}
+
+
+/* ---------- MEDIA QUERIES ----------*/
+
+@media (max-width: 576px) { 
+    header {
+        background: var(--myBlue);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header h1 {
+        padding-left: 50px;
+    }
+    body {
+        background: #F7F5F6;
+    }
+    main { 
+        flex-direction: column;
+        align-items: center;  
+    }
+    .card {
+        margin-right: 0;
+        color: black;
+    }
+ }
+
+@media (min-width: 576px) { 
+    br {display: none;}
+ }
